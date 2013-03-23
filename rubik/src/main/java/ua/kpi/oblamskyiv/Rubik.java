@@ -11,4 +11,8 @@ public class Rubik {
     public Object getFront() {
         return "";
     }
+
+    public Object getBack() {
+        return "";
+    }
 }

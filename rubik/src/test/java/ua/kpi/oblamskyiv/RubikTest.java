@@ -1,5 +1,6 @@
 package ua.kpi.oblamskyiv;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -12,20 +13,33 @@ import static org.junit.Assert.assertNotNull;
  */
 public class RubikTest {
 
+    private Game game;
+
+    @Before
+    public void init() {
+        game = new Game();
+    }
+
     // Появляється кубик
     @Test
     public void shouldExistRubikWhenGameStarts() {
-        Game game = new Game();
         assertNotNull(game.getRubik());
     }
 
     // Кубик має 6 граней
     @Test
-    public void shouldExistFrontEdgeWhenRubikCreated() {
-        Game game = new Game();
+     public void shouldExistFrontEdgeWhenRubikCreated() {
         Rubik cube = game.getRubik();
         assertNotNull(cube.getFront());
     }
+
+    @Test
+    public void shouldExistBackEdgeWhenRubikCreated() {
+        Rubik cube = game.getRubik();
+        assertNotNull(cube.getBack());
+    }
+
+
 
     // Кубик розміром 3х3х3
     // Кубик випадково перемішується
