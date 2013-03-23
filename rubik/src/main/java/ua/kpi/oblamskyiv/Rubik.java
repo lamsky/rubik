@@ -4,10 +4,10 @@ package ua.kpi.oblamskyiv;
  * Created with IntelliJ IDEA.
  * User: oblamskyiv
  * Date: 3/23/13
- * Time: 12:00 PM
+ * Time: 12:06 PM
  */
-public class Game {
-    public Rubik getRubik() {
-        return new Rubik();
+public class Rubik {
+    public int getSize() {
+        return 3;
     }
 }
