@@ -34,12 +34,12 @@ public class RubikTest {
     }
 
     private void assertEdgesExistence(Rubik cube) {
-        assertNotNull(cube.getFront());
-        assertNotNull(cube.getBack());
-        assertNotNull(cube.getUp());
-        assertNotNull(cube.getDown());
-        assertNotNull(cube.getLeft());
-        assertNotNull(cube.getRight());
+        assertNotNull("front", cube.getFront());
+        assertNotNull("back", cube.getBack());
+        assertNotNull("up", cube.getUp());
+        assertNotNull("down", cube.getDown());
+        assertNotNull("left", cube.getLeft());
+        assertNotNull("right", cube.getRight());
     }
 
 
