@@ -1,10 +1,10 @@
 package ua.kpi.oblamskyiv;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -60,7 +60,6 @@ public class RubikTest {
     }
 
     // На початку кожна грань має свій колір (число)
-    // front - 0, back - 1, up - 2, down - 3, left - 4, right - 5
     @Test
     public void shouldEdgesHaveCorrespondingColorsWhenCreated() {
         Rubik cube = game.getRubik();
@@ -73,7 +72,11 @@ public class RubikTest {
     }
 
     private void assertEdgeColor(String info, int colorID, Edge edge) {
-        assertEquals(info, colorID, edge.getColorID());
+        int[][] expected =
+                {{colorID, colorID, colorID},
+                {colorID, colorID, colorID},
+                {colorID, colorID, colorID}};
+        assertTrue(info, ArrayUtils.isEquals(expected, edge.toArray()));
     }
 
 
