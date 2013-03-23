@@ -3,6 +3,7 @@ package ua.kpi.oblamskyiv;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -42,8 +43,22 @@ public class RubikTest {
         assertNotNull("right", cube.getRight());
     }
 
-
     // Кубик розміром 3х3х3
+    @Test
+    public void shouldSizeBe3WhenCubeCreated() {
+        Rubik cube = game.getRubik();
+        assertRubiksSize(3, cube);
+    }
+
+    private void assertRubiksSize(int size, Rubik cube) {
+        assertEquals("front size", size, cube.getFront().size());
+        assertEquals("back size", size, cube.getBack().size());
+        assertEquals("up size", size, cube.getUp().size());
+        assertEquals("down size", size, cube.getDown().size());
+        assertEquals("left size", size, cube.getLeft().size());
+        assertEquals("right size", size, cube.getRight().size());
+    }
+
     // Кубик випадково перемішується
     // Можна повертати всі грані
     // Коли кожна грань буде однакового кольору - кінець гри

@@ -8,27 +8,27 @@ package ua.kpi.oblamskyiv;
  */
 public class Rubik {
 
-    public Object getFront() {
-        return "";
+    public Edge getFront() {
+        return new Edge();
     }
 
-    public Object getBack() {
-        return "";
+    public Edge getBack() {
+        return new Edge();
     }
 
-    public Object getUp() {
-        return "";
+    public Edge getUp() {
+        return new Edge();
     }
 
-    public Object getDown() {
-        return "";
+    public Edge getDown() {
+        return new Edge();
     }
 
-    public Object getLeft() {
-        return "";
+    public Edge getLeft() {
+        return new Edge();
     }
 
-    public Object getRight() {
-        return "";
+    public Edge getRight() {
+        return new Edge();
     }
 }
