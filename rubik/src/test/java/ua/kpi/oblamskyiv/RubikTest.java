@@ -59,6 +59,15 @@ public class RubikTest {
         assertEquals("right size", size, cube.getRight().size());
     }
 
+    // На початку кожна грань має свій колір (число)
+    // front - 0, back - 1, up - 2, down - 3, left - 4, right - 5
+    @Test
+    public void shouldFrontHasColor0WhenCreated() {
+        Rubik cube = game.getRubik();
+        Edge front = cube.getFront();
+        assertEquals(0, front.getColorID());
+    }
+
     // Кубик випадково перемішується
     // Можна повертати всі грані
     // Коли кожна грань буде однакового кольору - кінець гри

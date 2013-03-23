@@ -11,4 +11,8 @@ public class Edge {
     public int size() {
         return 3;
     }
+
+    public int getColorID() {
+        return 0;
+    }
 }
