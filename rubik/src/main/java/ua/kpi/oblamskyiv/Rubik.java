@@ -9,26 +9,26 @@ package ua.kpi.oblamskyiv;
 public class Rubik {
 
     public Edge getFront() {
-        return new Edge();
+        return new Edge(0);
     }
 
     public Edge getBack() {
-        return new Edge();
+        return new Edge(1);
     }
 
     public Edge getUp() {
-        return new Edge();
+        return new Edge(2);
     }
 
     public Edge getDown() {
-        return new Edge();
+        return new Edge(3);
     }
 
     public Edge getLeft() {
-        return new Edge();
+        return new Edge(4);
     }
 
     public Edge getRight() {
-        return new Edge();
+        return new Edge(5);
     }
 }

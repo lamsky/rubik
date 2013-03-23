@@ -62,11 +62,20 @@ public class RubikTest {
     // На початку кожна грань має свій колір (число)
     // front - 0, back - 1, up - 2, down - 3, left - 4, right - 5
     @Test
-    public void shouldFrontHasColor0WhenCreated() {
+    public void shouldEdgesHaveCorrespondingColorsWhenCreated() {
         Rubik cube = game.getRubik();
-        Edge front = cube.getFront();
-        assertEquals(0, front.getColorID());
+        assertEdgeColor("front color", 0, cube.getFront());
+        assertEdgeColor("back color", 1, cube.getBack());
+        assertEdgeColor("up color", 2, cube.getUp());
+        assertEdgeColor("down color", 3, cube.getDown());
+        assertEdgeColor("left color", 4, cube.getLeft());
+        assertEdgeColor("right color", 5, cube.getRight());
     }
+
+    private void assertEdgeColor(String info, int colorID, Edge edge) {
+        assertEquals(info, colorID, edge.getColorID());
+    }
+
 
     // Кубик випадково перемішується
     // Можна повертати всі грані

@@ -7,12 +7,17 @@ package ua.kpi.oblamskyiv;
  * Time: 1:45 PM
  */
 public class Edge {
+    private int colorID;
+
+    public Edge(int colorID) {
+        this.colorID = colorID;
+    }
 
     public int size() {
         return 3;
     }
 
     public int getColorID() {
-        return 0;
+        return colorID;
     }
 }
