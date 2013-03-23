@@ -7,7 +7,8 @@ package ua.kpi.oblamskyiv;
  * Time: 12:06 PM
  */
 public class Rubik {
-    public int getSize() {
-        return 3;
+
+    public Object getFront() {
+        return "";
     }
 }
