@@ -64,12 +64,12 @@ public class RubikTest {
     @Test
     public void shouldEdgesHaveCorrespondingColorsWhenCreated() {
         Rubik cube = game.getRubik();
-        assertEdgeColor("front color", 0, cube.getFront());
-        assertEdgeColor("back color", 1, cube.getBack());
-        assertEdgeColor("up color", 2, cube.getUp());
-        assertEdgeColor("down color", 3, cube.getDown());
-        assertEdgeColor("left color", 4, cube.getLeft());
-        assertEdgeColor("right color", 5, cube.getRight());
+        assertEdgeColor("front color", Rubik.FRONT_COLOR_ID, cube.getFront());
+        assertEdgeColor("back color", Rubik.BACK_COLOR_ID, cube.getBack());
+        assertEdgeColor("up color", Rubik.UP_COLOR_ID, cube.getUp());
+        assertEdgeColor("down color", Rubik.DOWN_COLOR_ID, cube.getDown());
+        assertEdgeColor("left color", Rubik.LEFT_COLOR_ID, cube.getLeft());
+        assertEdgeColor("right color", Rubik.RIGHT_COLOR_ID, cube.getRight());
     }
 
     private void assertEdgeColor(String info, int colorID, Edge edge) {
