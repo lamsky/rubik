@@ -28,17 +28,19 @@ public class RubikTest {
 
     // Кубик має 6 граней
     @Test
-     public void shouldExistFrontEdgeWhenRubikCreated() {
+     public void shouldExistEdgesWhenRubikCreated() {
         Rubik cube = game.getRubik();
+        assertEdgesExistence(cube);
+    }
+
+    private void assertEdgesExistence(Rubik cube) {
         assertNotNull(cube.getFront());
-    }
-
-    @Test
-    public void shouldExistBackEdgeWhenRubikCreated() {
-        Rubik cube = game.getRubik();
         assertNotNull(cube.getBack());
+        assertNotNull(cube.getUp());
+        assertNotNull(cube.getDown());
+        assertNotNull(cube.getLeft());
+        assertNotNull(cube.getRight());
     }
-
 
 
     // Кубик розміром 3х3х3

@@ -15,4 +15,20 @@ public class Rubik {
     public Object getBack() {
         return "";
     }
+
+    public Object getUp() {
+        return "";
+    }
+
+    public Object getDown() {
+        return "";
+    }
+
+    public Object getLeft() {
+        return "";
+    }
+
+    public Object getRight() {
+        return "";
+    }
 }
